@@ -59,6 +59,7 @@ Each molehill consists of a black background sprite and the colored molehill spr
 The javascript file "hitTheMole.js" contains the game logik; without it, you would just see the background image and the other sprites in the upper left corner.
 
 In the first step, we create the javascript method "onDeviceReady" that will be called when the page loades:
+
 ```javascript
 function onDeviceReady() {
     setBackgroundSize();
