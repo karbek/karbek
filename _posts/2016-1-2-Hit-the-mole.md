@@ -54,4 +54,5 @@ The index.html file containing the game is stored in the www directory.
 
 ```
 
-As you can see, each molehill consists of a black background sprite and the colored molehill sprite visible in the foreground. As we will let the mole appear from inside the molehill, we work with different z-indices. 
+Each molehill consists of a black background sprite and the colored molehill sprite visible in the foreground. As we will let the mole appear from inside the molehill, we work with different z-indices.
+
