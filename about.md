@@ -8,8 +8,8 @@ Some information about you!
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+My interests are: JEE, JPA, Hibernate, mobile game development, Javascript, HTML5, 
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[karin.karin.hess{@]googlemail.com](mailto:karin.karin.hess@googlemail.com)
