@@ -12,17 +12,17 @@ Our first step is to create the directory structure we need:
 
 www
 >css
-    >>hitTheMole.css
+>>hitTheMole.css
 >images
-    >>background.png
-    >>hole.png
-    >>holeBackground.png
-    >>logo.png
-    >>stars.png
-    >>theMole1.png
+>>background.png
+>>hole.png
+>>holeBackground.png
+>>logo.png
+>>stars.png
+>>theMole1.png
 >js
-    >>hitTheMole.js
-    >>underscore-min.js
+>>hitTheMole.js
+>>underscore-min.js
 >index.html
 
 The index.html file containing the game is stored in the root directory.
