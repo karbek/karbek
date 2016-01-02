@@ -56,3 +56,15 @@ The index.html file containing the game is stored in the www directory.
 
 Each molehill consists of a black background sprite and the colored molehill sprite visible in the foreground. As we will let the mole appear from inside the molehill, we work with different z-indices.
 
+The javascript file "hitTheMole.js" contains the game logik; without it, you would just see the background image and the other sprites in the upper left corner.
+
+In the first step, we create the javascript method "onDeviceReady" that will be called when the page loades:
+```javascript
+function onDeviceReady() {
+    setBackgroundSize();
+
+    initMole();
+    initHoles();
+    setTimeout("showTheMole()", interval);
+}
+```
