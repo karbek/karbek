@@ -12,33 +12,23 @@ Our first step is to create the directory structure we need:
 
 www
 >css
->>hitTheMole.css
 >images
->>background.png
->>hole.png
->>holeBackground.png
->>logo.png
->>stars.png
->>theMole1.png
 >js
->>hitTheMole.js
->>underscore-min.js
 >index.html
 
-The index.html file containing the game is stored in the root directory.
+Download the images and the css file and store them in the "images" and the "css" directory.
+
+The index.html file containing the game is stored in the www directory.
 
 
 ```html
 <!DOCTYPE html>
 <html>
     <head>
-
         <title>Hit the mole</title>
         <meta charset="UTF-8">
         <link rel="resource" type="application/l10n" href="locales/locales.ini" />
-
         <meta id="Viewport" name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <!--<link rel="stylesheet" href="lib/animate.min.css">-->
         <link href="css/hitTheMole.css" rel="stylesheet"/>
     </head>
     <body>
@@ -64,4 +54,4 @@ The index.html file containing the game is stored in the root directory.
 
 ```
 
-As you can see, each molehill consists of a black background sprite and the colored molehill sprite visible in the foreground. 
+As you can see, each molehill consists of a black background sprite and the colored molehill sprite visible in the foreground. As we will let the mole appear from inside the molehill, we work with different z-indices. 
