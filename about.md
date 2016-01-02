@@ -12,4 +12,4 @@ My interests are: JEE, JPA, Hibernate, mobile game development, Javascript, HTML
 
 ### Contact me
 
-[karin.karin.hess{@]googlemail.com](mailto:karin.karin.hess@googlemail.com)
+karin.karin.hess{@]googlemail.com
