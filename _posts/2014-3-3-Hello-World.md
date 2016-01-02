@@ -63,3 +63,5 @@ The index.html file containing the game is stored in the root directory.
 </html>
 
 ```
+
+As you can see, each molehill consists of a black background sprite and the colored molehill sprite visible in the foreground. 
