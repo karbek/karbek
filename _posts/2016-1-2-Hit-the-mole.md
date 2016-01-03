@@ -58,6 +58,16 @@ Each molehill consists of a black background sprite and the colored molehill spr
 
 The javascript file "hitTheMole.js" contains the game logik; without it, you would just see the background image and the other sprites in the upper left corner.
 
+In the first step, we will determine the game size. We introduce the following variables:
+
+```javascript
+var aspectRatio;
+var enlargement = 1;
+var borderWidth = 0;
+```
+
+As the game shall start in fullscreen mode, we have to detect the aspect ratio, the enlargement and the width of the border. Our background image is very large to match very large screens. For screens with a smaller aspect ratio, we center the background image and do not show the left and right border.
+
 In the first step, we create the javascript method "onDeviceReady" that will be called when the page loades:
 
 ```javascript
