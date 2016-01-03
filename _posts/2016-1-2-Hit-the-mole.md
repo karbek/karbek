@@ -83,7 +83,7 @@ function setBackgroundSize() {
         document.body.style["height"] = documentHeight + "px";
         document.body.style["width"] = documentWidth + "px";
     } else {
-        var backgroundAspectRatio = 1136 / 640;
+        var backgroundAspectRatio = longestAspectRatio;
         var backgroundWidth = backgroundAspectRatio * documentHeight;
         background.style["height"] = documentHeight + "px";
         document.body.style["height"] = documentHeight + "px";
@@ -98,15 +98,38 @@ function setBackgroundSize() {
 }
 ```
 
-In the first step, we create the javascript method "onDeviceReady" that will be called when the page loades:
+We use css to set the background and border size.
+
+When the Game page is loaded, we must execute "setBackgroundSize". This is done by introducing the method "onDeviceReady" initializing all game parameters. So far, "onDeviceReady" only calls "setBackgroundSize". Other method calls will follow later:
 
 ```javascript
 function onDeviceReady() {
     setBackgroundSize();
-
-    initMole();
-    initHoles();
-    setTimeout("showTheMole()", interval);
 }
 
 ```
+
+"onDeviceReady" is called as soon as the game web page is loaded:
+
+```javascript
+window.onload = onDeviceReady;
+```
+
+Here is a synopsis of our actual javascript code in "hitTheMole.js":
+
+```javascript
+window.onload = onDeviceReady;
+
+var aspectRatio;
+var enlargement = 1;
+var borderWidth = 0;
+
+function onDeviceReady() {
+    setBackgroundSize();
+}
+
+function setBackgroundSize() {
+    ...
+}
+```
+
