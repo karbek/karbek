@@ -68,6 +68,36 @@ var borderWidth = 0;
 
 As the game shall start in fullscreen mode, we have to detect the aspect ratio, the enlargement and the width of the border. Our background image is very large to match very large screens. For screens with a smaller aspect ratio, we center the background image and do not show the left and right border.
 
+The following method calculates the enlargement and the border width:
+
+```javascript
+function setBackgroundSize() {
+    var longestAspectRatio = 1136 / 640;
+    var documentWidth = window.innerWidth;
+    var documentHeight = window.innerHeight;
+    aspectRatio = documentWidth / documentHeight;
+    var background = document.getElementById("background");
+
+    if (aspectRatio >= longestAspectRatio) {
+        background.style["height"] = documentHeight + "px";
+        document.body.style["height"] = documentHeight + "px";
+        document.body.style["width"] = documentWidth + "px";
+    } else {
+        var backgroundAspectRatio = 1136 / 640;
+        var backgroundWidth = backgroundAspectRatio * documentHeight;
+        background.style["height"] = documentHeight + "px";
+        document.body.style["height"] = documentHeight + "px";
+        background.style["width"] = backgroundWidth + "px";
+        document.body.style["width"] = backgroundWidth + "px";
+        borderWidth = (backgroundWidth - documentWidth) / 2;
+        background.style["left"] = "-" + borderWidth + "px";
+    }
+
+    enlargement = background.offsetHeight / 640;
+    movementHeight = movementHeight * enlargement;
+}
+```
+
 In the first step, we create the javascript method "onDeviceReady" that will be called when the page loades:
 
 ```javascript
