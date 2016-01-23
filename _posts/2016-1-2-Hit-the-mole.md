@@ -133,3 +133,25 @@ function setBackgroundSize() {
 }
 ```
 
+Our next step is to init the mole and the stars appearing when the user hits it. We encapsulate this in the method 'initMole':
+
+```javascript
+function initMole() {
+    var mole = document.getElementById("mole");
+    mole.style["height"] = mole.offsetHeight * enlargement + "px";
+    mole.style["width"] = mole.offsetWidth * enlargement + "px";
+    
+    var stars = document.getElementById("stars");
+    stars.style["height"] = stars.offsetHeight * enlargement + "px";
+    stars.style["width"] = stars.offsetWidth * enlargement + "px";
+}
+```
+
+The only thing we have to do is to scale the mole and the star div.
+
+Our next step is to place the holes.
+
+To make the mole react when the user clicks on it, we create the method 'initMoleClickHandler'. The folling steps are executed by the onClick handler of the mole div:
+1. When the user clicks on the div, the handler is eliminated.
+2. 
+This method creates an onClick handler for the mole div. When the user clicks on the div, the handler is eliminated
