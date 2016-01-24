@@ -149,7 +149,41 @@ function initMole() {
 
 The only thing we have to do is to scale the mole and the star div.
 
-Our next step is to place the holes.
+Our next step is to place the molehills. For that purpose, we introduce a global array containing all possible molehill positions. The variable declaration is done at the beginning.
+
+```javascript
+var holePositions = [
+    {x: 242, y: 184},
+    {x: 638, y: 184},
+    {x: 54, y: 482},
+    {x: 436, y: 482},
+    {x: 816, y: 482}];
+```
+
+All the molehills have to be scaled and correctly placed on the screen. In the 'index.html' you can see that each molehill sprite has an individual identifier 'hole1', 'holeBackground1', 'hole2', 'holeBackground2', ...  
+As aforementioned, each molehill is composed of a black background sprite and the colored sprite with a higher z-index. This method performs the sizing operations for one molehill:
+
+```javascript
+function initHole(holeId, holeBackgroundId, holePosition) {
+    var hole = document.getElementById(holeId);
+    var height = hole.offsetHeight * enlargement + "px";
+    var width = hole.offsetWidth * enlargement + "px";
+    var positionX = holePosition["x"] * enlargement - borderWidth;
+    var positionY = holePosition["y"] * enlargement;
+    hole.style["height"] = height;
+    hole.style["width"] = width;
+    hole.style["left"] = positionX + "px";
+    hole.style["top"] = positionY + "px";
+
+    var holeBackground = document.getElementById(holeBackgroundId);
+    holeBackground.style["height"] = height;
+    holeBackground.style["width"] = width;
+    holeBackground.style["left"] = positionX + "px";
+    holeBackground.style["top"] = positionY + "px";
+}
+```
+
+
 
 To make the mole react when the user clicks on it, we create the method 'initMoleClickHandler'. The folling steps are executed by the onClick handler of the mole div:
 1. When the user clicks on the div, the handler is eliminated.
