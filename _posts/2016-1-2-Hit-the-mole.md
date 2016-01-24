@@ -195,7 +195,10 @@ function initHoles() {
 }
 ```
 
+
+
 To make the mole react when the user clicks on it, we create the method 'initMoleClickHandler'. The folling steps are executed by the onClick handler of the mole div:
 1. When the user clicks on the div, the handler is eliminated.
-2. 
+2 .
+
 This method creates an onClick handler for the mole div. When the user clicks on the div, the handler is eliminated
