@@ -183,7 +183,17 @@ function initHole(holeId, holeBackgroundId, holePosition) {
 }
 ```
 
+The method 'initHole' is called for all 5 molehills:
 
+```javascript
+function initHoles() {
+    initHole("hole1", "holeBackground1", holePositions[0]);
+    initHole("hole2", "holeBackground2", holePositions[1]);
+    initHole("hole3", "holeBackground3", holePositions[2]);
+    initHole("hole4", "holeBackground4", holePositions[3]);
+    initHole("hole5", "holeBackground5", holePositions[4]);
+}
+```
 
 To make the mole react when the user clicks on it, we create the method 'initMoleClickHandler'. The folling steps are executed by the onClick handler of the mole div:
 1. When the user clicks on the div, the handler is eliminated.
