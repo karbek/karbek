@@ -34,7 +34,7 @@ The important part is %{DATA:query} - it creates a field named "query" which can
 
 You can test your grok pattern with this online tester: http://grokconstructor.appspot.com/do/match
 
-The pattern is used in the logstash config file. Here is my example config file:
+The pattern is used in the logstash config file. Here is our example config file:
 
 ```bash
 input { 
