@@ -8,7 +8,7 @@ We want to analyze elasticsearch slow query logs, especially the queries contain
 
 There is no existing logstash-plugin for the elasticsearch slow query log. The mapping can be realized with grok. We define a grok-pattern to match the lines of the log file:
 
-```javascript
+```bash
 [2016-10-09 10:41:07,460][DEBUG][index.search.slowlog.query] took[304.3micros], took_millis[0], types[test_type], stats[], search_type[QUERY_THEN_FETCH], total_shards[5], source[], extra_source[{"query":{"query_string":{"query":"text=logstash-test","lowercase_expanded_terms":true,"analyze_wildcard":false}}}],
 ```
 
